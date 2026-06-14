@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280">
+    <title>Cozy House — Our Pets</title>
+    <link rel="icon" href="../../assets/icons/Logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- Header is a normal block; light bg comes from the page bg -->
+    <header class="header">
+      <div class="header__inner">
+        <a class="logo" href="../main/">
+          <span class="logo__title">Cozy House</span>
+          <span class="logo__subtitle">Shelter for pets in Boston</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="../main/">About the shelter</a>
+            </li>
+            <li class="nav__item nav__item--active">
+              <span class="nav__link">Our pets</span>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="../main/#help">Help the shelter</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#footer">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="pets-page">
+        <div class="pets-page__inner">
+
+          <h1 class="pets-page__heading">Our friends who<br>are looking for a house</h1>
+
+          <div class="cards-grid">
+
+            <article class="card">
+              <img class="card__photo" src="../../assets/images/pets-katrine-1.png" alt="Katrine">
+              <h2 class="card__name">Katrine</h2>
+              <a class="btn btn--outline" href="#">Learn more</a>
+            </article>
+
+
+            <article class="card">
+              <img class="card__photo" src="../../assets/images/pets-jennifer.png" alt="Jennifer">
+              <h2 class="card__name">Jennifer</h2>
+              <a class="btn btn--outline" href="#">Learn more</a>
+            </article>
+
+
+            <article class="card">
+              <img class="card__photo" src="../../assets/images/pets-woody.png" alt="Woody">
+              <h2 class="card__name">Woody</h2>
+              <a class="btn btn--outline" href="#">Learn more</a>
+            </article>
+
+
+            <article class="card">
+              <img class="card__photo" src="../../assets/images/pets-katrine.png" alt="Sophia">
+              <h2 class="card__name">Sophia</h2>
+              <a class="btn btn--outline" href="#">Learn more</a>
+            </article>
+
+
+            <article class="card">
+              <img class="card__photo" src="../../assets/images/pets-timmy.png" alt="Timmy">
+              <h2 class="card__name">Timmy</h2>
+              <a class="btn btn--outline" href="#">Learn more</a>
+            </article>
+
+
+            <article class="card">
+              <img class="card__photo" src="../../assets/images/pets-charly.png" alt="Charly">
+              <h2 class="card__name">Charly</h2>
+              <a class="btn btn--outline" href="#">Learn more</a>
+            </article>
+
+
+            <article class="card">
+              <img class="card__photo" src="../../assets/images/pets-scarlet.png" alt="Scarlett">
+              <h2 class="card__name">Scarlett</h2>
+              <a class="btn btn--outline" href="#">Learn more</a>
+            </article>
+
+
+            <article class="card">
+              <img class="card__photo" src="../../assets/images/pets-freddie.png" alt="Freddie">
+              <h2 class="card__name">Freddie</h2>
+              <a class="btn btn--outline" href="#">Learn more</a>
+            </article>
+
+
+          </div>
+
+          <nav class="pagination" aria-label="Pets pages">
+            <button class="paginator paginator--inactive" type="button" aria-label="First page" disabled>
+              &lt;&lt;
+            </button>
+            <button class="paginator paginator--inactive" type="button" aria-label="Previous page" disabled>
+              &lt;
+            </button>
+            <button class="paginator paginator--active" type="button" aria-current="page" aria-label="Page 1">
+              1
+            </button>
+            <button class="paginator" type="button" aria-label="Next page">
+              &gt;
+            </button>
+            <button class="paginator" type="button" aria-label="Last page">
+              &gt;&gt;
+            </button>
+          </nav>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="footer__inner">
+        <div class="footer__contacts">
+          <h2 class="footer__title">For questions<br>and suggestions</h2>
+          <a class="footer__link" href="mailto:email@shelter.com">
+            <img class="footer__link-icon" src="../../assets/icons/icon-email.svg" alt="">
+            email@shelter.com
+          </a>
+          <a class="footer__link" href="tel:+136745677554">
+            <img class="footer__link-icon" src="../../assets/icons/icon-phone.svg" alt="">
+            +13 674 567 75 54
+          </a>
+        </div>
+        <div class="footer__locations">
+          <h2 class="footer__title">We are waiting<br>for your visit</h2>
+          <a class="footer__loc" href="https://maps.google.com/?q=1+Central+Street+Boston" target="_blank" rel="noopener noreferrer">
+            <img class="footer__loc-icon" src="../../assets/icons/icon-marker.svg" alt="">
+            1 Central Street, Boston<br>(entrance from the store)
+          </a>
+          <a class="footer__loc" href="https://maps.google.com/?q=18+South+Park+London" target="_blank" rel="noopener noreferrer">
+            <img class="footer__loc-icon" src="../../assets/icons/icon-marker.svg" alt="">
+            18 South Park, London
+          </a>
+        </div>
+        <img
+          class="footer__puppy"
+          src="../../assets/images/footer-puppy.png"
+          alt=""
+          aria-hidden="true">
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
