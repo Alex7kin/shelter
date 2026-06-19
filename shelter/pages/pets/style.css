@@ -400,13 +400,13 @@ a.nav__link:hover { color: var(--color-dark); }
     padding-right: 30px;
   }
 
-  /* Cards — two columns, last two hidden */
   .pets-page { min-height: 0; }
 
   .pets-page__inner {
     min-height: 0;
     padding-top: 80px;
     padding-bottom: 80px;
+    gap: 35px;
   }
 
   .cards-grid {
@@ -421,15 +421,14 @@ a.nav__link:hover { color: var(--color-dark); }
 
   .card:nth-child(n + 7) { display: none; }
 
-  /* Footer — two text columns, puppy below */
   .footer { height: auto; }
 
   .footer__inner {
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 60px;
-    row-gap: 40px;
-    padding-top: 40px;
+    row-gap: 65px;
+    padding-top: 15px;
     padding-bottom: 0;
   }
 
@@ -483,7 +482,6 @@ a.nav__link:hover { color: var(--color-dark); }
   .pets-page__heading,
   .footer__title { font-size: 25px; }
 
-  /* Compact vertical rhythm on mobile */
   .pets-page__inner {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -495,16 +493,13 @@ a.nav__link:hover { color: var(--color-dark); }
     row-gap: 30px;
   }
 
-  /* Cards — single column, only first three shown */
   .cards-grid {
     grid-template-columns: minmax(0, 270px);
   }
 
   .card:nth-child(n + 4) { display: none; }
 
-  /* Pagination — tighter so it fits 320px */
   .pagination { gap: 10px; }
 
-  /* Footer */
   .footer__puppy { width: 260px; max-width: 260px; }
 }
