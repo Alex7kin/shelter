@@ -296,7 +296,7 @@ a.nav__link:hover { color: var(--color-card); }
 }
 
 .about__content {
-  width: 430px;
+  max-width: 430px;
   margin-left: 120px;   
   margin-top: 15px;     
   display: flex;
@@ -650,7 +650,6 @@ a.nav__link:hover { color: var(--color-card); }
   object-position: bottom center;
 }
 
-/* Burger — hidden on desktop / tablet, shown below 768px */
 .burger {
   display: none;
   width: 30px;
@@ -732,7 +731,7 @@ a.nav__link:hover { color: var(--color-card); }
     flex-direction: column;
     align-items: center;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
     gap: 80px;
   }
 
@@ -744,18 +743,18 @@ a.nav__link:hover { color: var(--color-card); }
   .about__content {
     order: 1;
     width: 100%;
-    max-width: 437px;
+    max-width: 430px;
     margin: 0;
   }
 
-  .about__heading { text-align: center; }
+  .about__heading { text-align: left; }
 
   /* Our friends — two cards with side arrows */
   .pets { height: auto; }
 
   .pets__inner {
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
   }
 
   .pets__heading { width: 100%; }
@@ -784,10 +783,9 @@ a.nav__link:hover { color: var(--color-card); }
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-items: center;
-    column-gap: 40px;
-    row-gap: 45px;
+    row-gap: 50px;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
   }
 
   .help__heading {
@@ -810,7 +808,7 @@ a.nav__link:hover { color: var(--color-card); }
     flex-direction: column-reverse;
     align-items: center;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
     gap: 60px;
   }
 
@@ -835,7 +833,7 @@ a.nav__link:hover { color: var(--color-card); }
     justify-content: center;
     column-gap: 60px;
     row-gap: 40px;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 0;
   }
 
@@ -895,9 +893,17 @@ a.nav__link:hover { color: var(--color-card); }
 /* ===================== MOBILE  (<= 480px) ===================== */
 @media (max-width: 480px) {
 
-  .header__inner,
+  .header__inner{
+    padding-left: 20px;
+    padding-right: 15px;
+  }
+  
+  .about__inner{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .start-screen__inner,
-  .about__inner,
   .pets__inner,
   .help__inner,
   .donation__inner,
@@ -912,16 +918,17 @@ a.nav__link:hover { color: var(--color-card); }
   .help__heading,
   .donation__heading,
   .footer__title {
+    text-align: center;
     font-size: 25px;
+    letter-spacing: 0.06em;
   }
 
-  /* Compact vertical rhythm on mobile */
   .about__inner,
   .pets__inner,
   .help__inner,
   .donation__inner {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .about__inner { gap: 50px; }
@@ -970,6 +977,9 @@ a.nav__link:hover { color: var(--color-card); }
   .donation__subheading { text-align: center; }
 
   .donation__heading { width: 100%; }
+
+  /* keep the subheading on one line at 320, as in the reference */
+  .donation__subheading { letter-spacing: 0; }
 
   .donation__card {
     width: 100%;
