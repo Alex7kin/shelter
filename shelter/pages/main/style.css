@@ -49,7 +49,6 @@
 html { scroll-behavior: smooth; }
 
 body {
-  min-width: 1280px;
   font-family: var(--font-body);
   background-color: var(--color-dark);
 }
@@ -226,7 +225,7 @@ a.nav__link:hover { color: var(--color-card); }
   height: 908px;
   background-color: #211F20;
   background-image:
-    url('../../assets/images/noise_transparent.png'),
+    url('../../assets/images/noise_transparent@2x.png'),
     radial-gradient(80% 160% at 0% 0%, #5B483A 0%, #262425 100%);
   background-repeat: repeat, no-repeat;
   background-size: 110px 110px, cover;
@@ -297,7 +296,7 @@ a.nav__link:hover { color: var(--color-card); }
 }
 
 .about__content {
-  width: 430px;
+  max-width: 430px;
   margin-left: 120px;   
   margin-top: 15px;     
   display: flex;
@@ -486,8 +485,8 @@ a.nav__link:hover { color: var(--color-card); }
   object-fit: contain;
   object-position: bottom left;
   flex-shrink: 0;
-  margin-left: 143px;  
-  margin-top: 11px;    /
+  margin-left: 143px;
+  margin-top: 11px;
 }
 
 .donation__content {
@@ -565,7 +564,7 @@ a.nav__link:hover { color: var(--color-card); }
 .footer {
   background-color: #211F20;
   background-image:
-    url('../../assets/images/noise_transparent.png'),
+    url('../../assets/images/noise_transparent@2x.png'),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
   background-repeat: repeat, no-repeat;
   background-size: 110px 110px, cover;
@@ -649,5 +648,360 @@ a.nav__link:hover { color: var(--color-card); }
   height: 310px;
   object-fit: contain;
   object-position: bottom center;
+}
+
+.burger {
+  display: none;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.burger span {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+.burger span:nth-child(1) { top: 0; }
+.burger span:nth-child(2) { top: 10px; }
+.burger span:nth-child(3) { top: 20px; }
+
+
+/* ============ TABLET / NARROW DESKTOP  (<= 1279px) ============ */
+@media (max-width: 1279px) {
+
+  .header__inner,
+  .start-screen__inner,
+  .about__inner,
+  .pets__inner,
+  .help__inner,
+  .donation__inner,
+  .footer__inner {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  /* Start screen */
+  .start-screen { height: auto; }
+
+  .start-screen__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .start-screen__content {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 460px;
+    align-items: center;
+    text-align: left;
+    padding-top: 150px;
+  }
+
+  .start-screen__heading,
+  .start-screen__subheading { width: 100%;}
+
+  .start-screen__puppy {
+    position: static;
+    right: auto;
+    bottom: auto;
+    align-self: flex-end;
+    width: 569px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 100px;
+  }
+
+  /* About */
+  .about { height: auto; }
+
+  .about__inner {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    gap: 80px;
+  }
+
+  .about__image {
+    order: 2;
+    margin: 0;
+  }
+
+  .about__content {
+    order: 1;
+    width: 100%;
+    max-width: 430px;
+    margin: 0;
+  }
+
+  .about__heading { text-align: left; }
+
+  /* Our friends — two cards with side arrows */
+  .pets { height: auto; }
+
+  .pets__inner {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  .pets__heading { width: 100%; }
+
+  .pets__cards {
+    flex: 1;
+    min-width: 0;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .pets__cards .card {
+    width: 100%;
+    max-width: 270px;
+  }
+
+  .pets__cards .card__photo { width: 100%; }
+
+  /* 3rd card drops on tablet */
+  .pets__cards .card:nth-child(3) { display: none; }
+
+  /* Help — 3-column grid */
+  .help { height: auto; }
+
+  .help__inner {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    row-gap: 50px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  .help__heading {
+    grid-column: 1 / -1;
+    margin-bottom: 15px;
+  }
+
+  .help__list {
+    display: contents;
+    width: auto;
+    margin: 0;
+  }
+
+  .help__label { white-space: normal; }
+
+  /* Donation — content over dog */
+  .donation { height: auto; }
+
+  .donation__inner {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    gap: 60px;
+  }
+
+  .donation__dog {
+    width: 100%;
+    max-width: 505px;
+    height: auto;
+    margin: 0;
+  }
+
+  .donation__content {
+    width: 100%;
+    max-width: 380px;
+    margin: 0;
+  }
+
+  /* Footer — two text columns, puppy below */
+  .footer { height: auto; }
+
+  .footer__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 60px;
+    row-gap: 40px;
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+
+  .footer__locations { margin-left: 0; }
+
+  .footer__puppy {
+    position: static;
+    right: auto;
+    bottom: auto;
+    flex-basis: 100%;
+    width: 300px;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+
+/* ===================== BURGER  (< 768px) ===================== */
+@media (max-width: 767px) {
+  .nav { display: none; }
+  .burger { display: block; }
+}
+
+
+/* ============ NARROW  (<= 600px): single card + stacked footer ============ */
+@media (max-width: 600px) {
+
+  .pets__cards .card:nth-child(2) { display: none; }
+
+  .pets__slider-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 80px;
+    row-gap: 30px;
+  }
+
+  .pets__cards {
+    order: -1;
+    flex: 0 1 100%;
+    width: 100%;
+  }
+
+  .footer__contacts,
+  .footer__locations {
+    width: 100%;
+    max-width: 302px;
+  }
+
+  .footer__title {
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+
+/* ===================== MOBILE  (<= 480px) ===================== */
+@media (max-width: 480px) {
+
+  .header__inner{
+    padding-left: 20px;
+    padding-right: 15px;
+  }
+  
+  .about__inner{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .start-screen__inner,
+  .pets__inner,
+  .help__inner,
+  .donation__inner,
+  .footer__inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .start-screen__heading,
+  .about__heading,
+  .pets__heading,
+  .help__heading,
+  .donation__heading,
+  .footer__title {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 0.06em;
+  }
+
+  .about__inner,
+  .pets__inner,
+  .help__inner,
+  .donation__inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .about__inner { gap: 50px; }
+  .pets__inner { gap: 40px; }
+  .donation__inner { gap: 40px; }
+  .help__inner { row-gap: 30px; }
+  .help__heading { margin-bottom: 0; }
+
+  .footer__inner {
+    padding-top: 30px;
+    row-gap: 30px;
+  }
+
+  .start-screen__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .start-screen__puppy {
+    width: 260px;
+  }
+
+  /* About */
+  .about__image {
+    width: 260px;
+    height: auto;
+  }
+
+  .about__text { text-align: justify; }
+
+  .help__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .help__item { gap: 20px; }
+
+  .help__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .help__label { font-size: 15px; }
+
+  /* Donation */
+  .donation__heading,
+  .donation__subheading { text-align: center; }
+
+  .donation__heading { width: 100%; }
+
+  /* keep the subheading on one line at 320, as in the reference */
+  .donation__subheading { letter-spacing: 0; }
+
+  .donation__card {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .donation__card-inner {
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .donation__card-number { font-size: 15px; }
+
+  .donation__legal {
+    width: 100%;
+    text-align: justify;
+  }
+
+  /* Dog matches 320 design (260px) */
+  .donation__dog { width: 260px; }
+
+  /* Footer */
+  .footer__puppy { width: 260px; max-width: 260px; }
 }
 
